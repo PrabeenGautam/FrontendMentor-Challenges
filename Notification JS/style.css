@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrayishBlue: hsl(210, 60%, 98%);
+  --lightGrayishBlue1: hsl(211, 68%, 94%);
+  --lightGrayishBlue2: hsl(205, 33%, 90%);
+  --grayishBlue: hsl(219, 14%, 63%);
+  --darkGrayishBlue: hsl(219, 12%, 42%);
+  --toodarkGrayishBlue: hsl(224, 21%, 14%);
+}
+
+body {
+  background-color: var(--lightGrayishBlue);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.notification-container {
+  width: 75vw;
+  margin: 4rem auto;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: 1s ease-in-out;
+}
+
+/* Header Section  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  font-weight: bold;
+}
+
+.header .heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.heading .notification_count {
+  background-color: var(--blue);
+  color: var(--lightGrayishBlue);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.header .mark {
+  color: var(--grayishBlue);
+  line-height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.header .mark:hover {
+  color: var(--blue);
+}
+
+/* Notification Center  */
+
+.notification {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.notification.new-list {
+  background-color: var(--lightGrayishBlue);
+  border-radius: 7px;
+}
+
+.notification img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.notification-details {
+  align-self: center;
+}
+
+.details .task {
+  color: var(--grayishBlue);
+  font-weight: 500;
+}
+
+.details .user {
+  font-weight: bold;
+  color: var(-toodarkGrayishBlue);
+}
+
+.details .topic {
+  font-weight: bold;
+  color: var(--darkGrayishBlue);
+}
+
+.details .topic.group {
+  color: var(--blue);
+}
+
+.details .user:hover,
+.details .topic:hover {
+  color: var(--blue);
+}
+
+.notification-new {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-left: 5px;
+  background-color: var(--red);
+  border-radius: 35px;
+}
+
+.moment {
+  color: var(--grayishBlue);
+}
+
+.notification-msg {
+  border: 1px solid var(--lightGrayishBlue2);
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 9px;
+  font-weight: 500;
+  color: var(--grayishBlue);
+}
+
+.picture {
+  margin-left: auto;
+}
+
+.notification:hover {
+  background-color: var(--lightGrayishBlue1);
+}
+
+.notification:focus {
+  background-color: var(--lightGrayishBlue2);
+}
+
+@media screen and (max-width: 45rem) {
+  .notification-container {
+    width: 100%;
+    margin: 0;
+    padding: 0.8rem;
+  }
+}
