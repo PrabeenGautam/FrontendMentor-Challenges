@@ -19,7 +19,7 @@ html {
   line-height: 1.5;
 }
 
-a[role="nav-link"] {
+a {
   text-decoration: none;
 }
 body {
